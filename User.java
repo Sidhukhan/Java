@@ -1,96 +1,58 @@
+package bankapk.jdbc.entity;
 
-
-import java.util.ArrayList;
-import java.util.List;
-
-public class User extends Object{
-	private String firstName;
-	private String lastName;
-	private long phoneNo;
+public class User {
+	
+	private int UserId;
+	private String FirstName;
+	private String LastName;
+	private long PhoneNo;
 	private String DateOfBirth;
 	private String Address;
-	private int userId;
-	private String passWord;
+	private String PassWord;
+//	private Wallet Wallet;
 	
-	private List<Bankaccount> Bankacctlist = new ArrayList<Bankaccount>();
-	
-	public List<Bankaccount> getBankacctlist() {
-		return Bankacctlist;
+	public int getUserId() {
+		return UserId;
 	}
-
-	public void setBankacctlist(List<Bankaccount> bankacctlist) {
-		Bankacctlist = bankacctlist;
+	public void setUserId(int userId) {
+		UserId = userId;
 	}
-	
 	public String getFirstName() {
-		return firstName;
+		return FirstName;
 	}
-
 	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+		FirstName = firstName;
 	}
-
 	public String getLastName() {
-		return lastName;
+		return LastName;
 	}
-
 	public void setLastName(String lastName) {
-		this.lastName = lastName;
+		LastName = lastName;
 	}
-
 	public long getPhoneNo() {
-		return phoneNo;
+		return PhoneNo;
 	}
-
 	public void setPhoneNo(long phoneNo) {
-		this.phoneNo = phoneNo;
+		PhoneNo = phoneNo;
 	}
-
 	public String getDateOfBirth() {
 		return DateOfBirth;
 	}
-
 	public void setDateOfBirth(String dateOfBirth) {
 		DateOfBirth = dateOfBirth;
 	}
-
 	public String getAddress() {
 		return Address;
 	}
-
 	public void setAddress(String address) {
 		Address = address;
 	}
-
-	public int getUserId() {
-		return userId;
-	}
-
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
-
 	public String getPassWord() {
-		return passWord;
+		return PassWord;
 	}
-
 	public void setPassWord(String passWord) {
-		this.passWord = passWord;
-	}
-	//Account[]
-	//Bank Acccount[]
-	
-	//Payment Account
-	@Override
-	public String toString() {
-		return this.userId + ":" + this.firstName + ":" + this.lastName+":"+ this.phoneNo+":"+this.DateOfBirth+":"+this.Address+":"+this.passWord;
-		
-	}
-	public String UserToFile() {
-		return this.userId + "," + this.firstName + "," + this.lastName+","+ this.phoneNo+","+this.DateOfBirth+","+this.Address+","+this.passWord+"\n";
-		
+		PassWord = passWord;
 	}
 	
-
-	
+	 
 }
